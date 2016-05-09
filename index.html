@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link href='style.css' rel='stylesheet'>
+  <script src='md5.min.js'></script>
+  <script src='jquery.js'></script>
+  <script src='jdenticon-1.3.2.min.js'></script>
+  <script src='moment.min.js'></script>
+  <script src='data_generator.js'></script>
+  <script src='app.js'></script>
+</head>
+<body>
+  <div id='header'>
+    <h1><span class='blueText pointer showAll'>Twittler</span></h1>
+  </div>
+  <div id='wrapper' class='greyBack'>
+    <div id='newTweet' class='blueBack'>
+      <div id='inputWrapper'>
+        <span class='whiteText padFive relative'>
+          <span class='bigFont'>@</span>
+          <input type='text' value='visitor' size='7' class='bigFont blueBack noBorder padFive whiteText widthTest' id="userName" disabled>
+          <i class="fa fa-pencil-square-o alphaFifty editIcon bigFont" aria-hidden="true"></i>
+          <span class='bigFont'> : </span>
+        </span>
+        <input type='text' placeholder='Write a new tweet...' size='24' class='noBorder padFive bigFont' id='newInputText'>
+        <input type='button' value='Post' class='whiteText greenBack noBorder padFive pointer widthTwenty bigFont' id='newInputButton'>
+      </div>
+    </div>
+    <div id='allAndNew'>
+      <div id='currentFilter' class='centerText medFont whiteText blueBack padFifteen hidden relative'>
+        <span class='showAll topLeft padFive whiteText pointer'> &lt back </span>
+        <canvas width='150' height='150' id='heroIcon' class='whiteBack'></canvas>
+        <p class='medFont'>@<span id='filteredUser'></span><p>
+      </div>
+      <div class='padTwentyFive'>
+      <div id='showNew' class='centerText'>
+        <span id='showNewText' class='pointer medFont blueText dashBorder hidden'>Load new tweets</span>
+      </div>
+      </div>
+    </div>
+    <div id='tweets'>
+    </div>
+  </div>
+</body>
+</html>

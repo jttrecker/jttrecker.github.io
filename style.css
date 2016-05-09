@@ -1,0 +1,166 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Lato', sans-serif;
+}
+
+#header {
+  padding: 20px;
+  border-bottom: solid lightgrey 2px;
+}
+
+#header h1 {
+  padding-left: 35px;
+}
+
+#wrapper {
+  margin: auto;
+  margin-top: 65px;
+  width: 850px;
+}
+
+#inputWrapper {
+  padding: 10px;
+  margin: auto;
+}
+
+#icon {
+  width: 100px;
+  height: 100px;
+}
+
+#userName:focus {
+  color: black;
+  background-color: white;
+}
+
+.relative {
+  position: relative;
+}
+
+.topLeft {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.underLined {
+  text-decoration: underline;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.alphaFifty {
+  opacity: 0.5;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.widthText {
+  width: 10px;
+}
+
+.widthTwenty {
+  width: 19%;
+}
+
+.widthEighty {
+  width: 79%;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.padFive {
+  padding: 5px;
+}
+
+.padFifteen {
+  padding: 15px;
+}
+
+.padTwentyFive {
+  padding: 25px;
+}
+
+.heightOneHundred {
+  height: 150px;
+}
+
+.noBorder {
+  border: none;
+}
+
+.dashBorder {
+  border-bottom: dashed;
+}
+
+.bigFont {
+  font-size: 200%;
+}
+
+.medFont {
+  font-size: 130%
+}
+
+.boldFont {
+  font-weight: bold;
+}
+
+.blueText {
+  color: #437bae;
+}
+
+.blueLightText {
+  color: #93C2ED;
+}
+
+.whiteText {
+  color: white;
+}
+
+.blueBack {
+  background-color: #437bae;
+}
+
+.greenBack {
+  background-color: #48d084;
+}
+
+.greyBack {
+  background-color: #f5f5f5;
+}
+
+.tweet:hover {
+  background-color: #e5e5e5;
+}
+
+.darkGreyBack {
+  background-color: #d8d8d8;
+  margin: auto;
+}
+
+.whiteBack {
+  background-color: white;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.overflowAuto {
+  overflow: auto;
+}
+
+.hidden {
+  display: none;
+}
