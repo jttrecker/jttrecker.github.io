@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
   <head>
+    <title>Twittler</title>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
+    <header class="container">
+      <h1 class="logo">
+        <a href="index.html">Twittler</a>
+      </h1>
+    </header>
     <script>
 
       $(document).ready(function(){
         var $body = $('body');
-        $body.html('');
+        // $body.html('');
 
         var index = streams.home.length - 1;
         while(index >= 0){
@@ -23,5 +30,6 @@
       });
 
     </script>
+  
   </body>
 </html>
