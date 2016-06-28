@@ -1,21 +1,25 @@
 $(document).ready(function(){
   var $tweets = $('ul');
-  var $tweet = $('<li class="tweets"></li>');
-  // $twitts.html('');
+  $tweets.html('');
 
   var index = streams.home.length - 1;
-  while(index >= 0){
+  while(index >= 0) {
     var tweet = streams.home[index];
-    var $tweet = $('<li class="tweets"></li>');
     var timestamp = moment().startOf('second').fromNow();
-    var $user = $('<a href  ="#" class="user"></a>');
+    var $tweet = $('<li class="tweets"></li>');
+    var $user = $('<a href="#" class="user"></a>');
     
-    $tweet.text('@' + tweet.user + ': ' + tweet.message + " ....... " + timestamp);
-    $tweet.appendTo($tweets);
+    $user.attr('data-user', tweet.user);
+    $user.text('@' + tweet.user);
+    $tweet.text(': ' + tweet.message + " ....... " + timestamp);
+
+    $user.prependTo($tweet);
+    $tweet.appendTo($tweets)
     index -= 1;
   }
 
   $('.btn').on('click', function() {
+    var $tweet = $('<li class="tweets"></li>');
     var newTweet = $('.textbox').val();
     $tweet.text('@visitor' + ': ' + newTweet + " ....... " + timestamp);
     $tweet.prependTo($tweets);
