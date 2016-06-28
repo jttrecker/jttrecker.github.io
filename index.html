@@ -4,7 +4,7 @@
     <title>Twittler</title>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="assets/main.css">
   </head>
   <body>
     <header>
@@ -17,11 +17,14 @@
         <span class="title">@ visitor</span>
         <div class="inputs">
           <a href="#" class="btn" data-dancer-maker-function-name="makeBlinkyDancer">Post</a>
-          <input class="textbox" type="text" name="tweet" title="Write a new tweet..."/>
-        </div>
+          <input class="textbox" type="text" name="tweet" placeholder="Write a new tweet..."/>
+          <span class="colon">:</span>
+          <img src="assets/button.jpg" text=":">
       </div>
-      <ul class="tweets"></ul>
-    </div>
+      </div>
+        <a class="refresh" href="index.html">Load 14 new tweets</a>
+        <ul class="tweets"></ul>
+      </div>
     <script src="init.js"></script>
   </body>
 </html>

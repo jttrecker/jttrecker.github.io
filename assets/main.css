@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+/* Normalization */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -47,7 +49,19 @@ table {
 	border-spacing: 0;
 }
 
+
+
+
 /* Header */
+
+.logo {
+	padding: 10px 30px;
+	color: #417BAD;
+	border-style: solid;
+	border-bottom: medium solid #F5F5F5;
+}
+
+/* Body */
 
 body, html{
   height:100%;
@@ -55,13 +69,6 @@ body, html{
 
 body {
 	font: normal normal lighter 25px/1.5em arial, serif, sans-serif;	
-}
-
-.logo {
-	padding: 10px 30px;
-	color: #417BAD;
-	border-style: solid;
-	border-bottom: medium solid #F5F5F5;
 }
 
 .container {
@@ -73,18 +80,20 @@ body {
 	background-color: #F5F5F5;
 }
 
+/* Topbar */
+
 .topbar {
   height:40px;
   background-color: #417BAD;
   padding:5px 12px;
 }
 
-.title {
+.title, .colon {
 	float: left;
 	color: white;
 }
 
-.btn, .textbox {
+.btn, .textbox, img, .colon {
 	float: right;
 	height: 30px;
 	margin: 2px;
@@ -103,4 +112,31 @@ body {
 .textbox {
 	width: 350px;
 	margin-left: 0;
+	font-weight: 20px;
+}
+
+img {
+	margin-right: 0;
+}
+
+.colon {
+	margin: 0 5px 0 0;
+}
+
+/* Reload */
+
+.refresh {
+	text-align: center;
+	border-bottom: 3px dotted #417BAD;
+	text-decoration: none;
+	color: #417BAD;
+	font-size: 60%;
+}
+
+/* Tweetbox*/
+
+.tweetbox {
+	display: inline-block;
+	right: 50px;
+	margin: 10px 5px;
 }
