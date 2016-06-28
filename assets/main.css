@@ -72,11 +72,9 @@ body {
 }
 
 .container {
-	position: absolute;
-	top: 100px;
-	right: 200px;
-	bottom: 50px;
-	left: 200px;
+	display: block;
+	width: 1150px;
+	margin: 50px auto;
 	background-color: #F5F5F5;
 }
 
@@ -126,17 +124,22 @@ img {
 /* Reload */
 
 .refresh {
-	text-align: center;
+	position: relative;
+	top: 20px;
+	left: 510px;
 	border-bottom: 3px dotted #417BAD;
 	text-decoration: none;
 	color: #417BAD;
 	font-size: 60%;
 }
 
-/* Tweetbox*/
+/* Tweets */
 
-.tweetbox {
-	display: inline-block;
-	right: 50px;
-	margin: 10px 5px;
+.tweets {
+
+	display: block;
+	margin: 20px 50px;
+	height: 200px;
+	background-color: white;
+	
 }

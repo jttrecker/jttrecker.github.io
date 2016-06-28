@@ -5,12 +5,11 @@ $(document).ready(function(){
   var index = streams.home.length - 1;
   while(index >= 0){
     var tweet = streams.home[index];
+    var timestamp = moment().startOf('minute').fromNow();
     var $tweet = $('<li class="tweets"></li>');
     var $user = $('<a href="#" class="user"></a>');
     
-    
-    
-    $tweet.text('@' + tweet.user + ': ' + tweet.message);
+    $tweet.text('@' + tweet.user + ': ' + tweet.message + " ....... " + timestamp);
     $tweet.appendTo($tweets);
     index -= 1;
   }

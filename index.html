@@ -5,6 +5,7 @@
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
     <link rel="stylesheet" href="assets/main.css">
+    <script src="assets/moment.js"></script>
   </head>
   <body>
     <header>
@@ -12,19 +13,21 @@
         <a>Twittler</a>
       </h1>
     </header>
-    <div class="container">
+    <section class="container">
       <div class="topbar">
         <span class="title">@ visitor</span>
         <div class="inputs">
-          <a href="#" class="btn" data-dancer-maker-function-name="makeBlinkyDancer">Post</a>
+          <a href="#" class="btn" tweet-maker-function-name="newTweet">Post</a>
           <input class="textbox" type="text" name="tweet" placeholder="Write a new tweet..."/>
           <span class="colon">:</span>
           <img src="assets/button.jpg" text=":">
+        </div>
       </div>
-      </div>
-        <a class="refresh" href="index.html">Load 14 new tweets</a>
-        <ul class="tweets"></ul>
-      </div>
-    <script src="init.js"></script>
+      <a class="refresh" href="index.html">Load 10 new tweets</a>      
+      <ul>
+        <!-- append li here -->
+      </ul>
+    </section>
+    <script   src="init.js"></script>
   </body>
 </html>
