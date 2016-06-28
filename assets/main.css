@@ -136,10 +136,8 @@ img {
 /* Tweets */
 
 .tweets {
-
 	display: block;
 	margin: 20px 50px;
-	height: 200px;
+	height: 100px;
 	background-color: white;
-	
 }

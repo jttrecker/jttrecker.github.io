@@ -1,11 +1,12 @@
 $(document).ready(function(){
   var $tweets = $('ul');
-  // $tweets.html('');
+  $tweets.html('');
 
+  // history of most recent tweets 
   var index = streams.home.length - 1;
   while(index >= 0) {
     var tweet = streams.home[index];
-    var timestamp = moment().startOf('second').fromNow();
+    var timestamp = moment(tweet.created_at).fromNow();
     var $tweet = $('<li class="tweets"></li>');
     var $user = $('<a href="#" class="user"></a>');
     
@@ -15,9 +16,10 @@ $(document).ready(function(){
 
     $user.prependTo($tweet);
     $tweet.appendTo($tweets)
-    index -= 1;
+    index--;
   }
 
+  // visitor tweet behavior
   $('.btn').on('click', function() {
     var $tweet = $('<li class="tweets"></li>');
     var newTweet = $('.textbox').val();
@@ -25,6 +27,7 @@ $(document).ready(function(){
     $tweet.prependTo($tweets);
   })
 
+  // user tweet history
   $('.user').on('click', function() {
     $('li').remove();
     $('.inputs').remove();
@@ -34,17 +37,10 @@ $(document).ready(function(){
     $('.title').text(user + "'s tweets");
     var tweetNum = 0;
 
-    // var $userLink = $('<a href="#" class="user"></a>');
-    // var tweet = streams.users[user][tweetNum];
-    // $userLink.attr('data-user', tweet.user);
-    // $userLink.text('@' + tweet.user);
-    // $tweet.text(': ' + tweet.message + " ....... " + timestamp);
-    // append?
-
     while(tweetNum <= index) {
       var $tweet = $('<li class="tweets"></li>');
       var tweet = streams.users[user][tweetNum];
-      var timestamp = moment().startOf('second').fromNow();
+      var timestamp = moment(tweet.created_at).fromNow();
 
       $tweet.text(tweet.message + " ....... " + timestamp);
       $tweet.appendTo($tweets);
@@ -55,12 +51,3 @@ $(document).ready(function(){
   })
 
 });
-
-
-// when the DOM's ready
-// append two sets of elements to html
-  // 1. user info, including...
-    // a. user icon
-    // b. linked user name
-    // c. time stamp
-  // 2. text box containing tweet
