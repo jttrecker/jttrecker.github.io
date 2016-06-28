@@ -1,6 +1,6 @@
 $(document).ready(function(){
   var $tweets = $('ul');
-  $tweets.html('');
+  // $tweets.html('');
 
   var index = streams.home.length - 1;
   while(index >= 0) {
@@ -24,6 +24,36 @@ $(document).ready(function(){
     $tweet.text('@visitor' + ': ' + newTweet + " ....... " + timestamp);
     $tweet.prependTo($tweets);
   })
+
+  $('.user').on('click', function() {
+    $('li').remove();
+    $('.inputs').remove();
+
+    var user = $(this).data('user');
+    var index = streams.users[user].length - 1;
+    $('.title').text(user + "'s tweets");
+    var tweetNum = 0;
+
+    // var $userLink = $('<a href="#" class="user"></a>');
+    // var tweet = streams.users[user][tweetNum];
+    // $userLink.attr('data-user', tweet.user);
+    // $userLink.text('@' + tweet.user);
+    // $tweet.text(': ' + tweet.message + " ....... " + timestamp);
+    // append?
+
+    while(tweetNum <= index) {
+      var $tweet = $('<li class="tweets"></li>');
+      var tweet = streams.users[user][tweetNum];
+      var timestamp = moment().startOf('second').fromNow();
+
+      $tweet.text(tweet.message + " ....... " + timestamp);
+      $tweet.appendTo($tweets);
+
+      tweetNum++;
+    }
+
+  })
+
 });
 
 
