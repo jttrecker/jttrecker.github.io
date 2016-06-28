@@ -7,29 +7,21 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <header class="container">
+    <header>
       <h1 class="logo">
-        <a href="index.html">Twittler</a>
+        <a>Twittler</a>
       </h1>
     </header>
-    <script>
-
-      $(document).ready(function(){
-        var $body = $('body');
-        // $body.html('');
-
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
-
-      });
-
-    </script>
-  
+    <div class="container">
+      <div class="topbar">
+        <span class="title">@ visitor</span>
+        <div class="inputs">
+          <a href="#" class="btn" data-dancer-maker-function-name="makeBlinkyDancer">Post</a>
+          <input class="textbox" type="text" name="tweet" title="Write a new tweet..."/>
+        </div>
+      </div>
+      <ul class="tweets"></ul>
+    </div>
+    <script src="init.js"></script>
   </body>
 </html>
